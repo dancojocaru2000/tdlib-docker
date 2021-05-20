@@ -8,8 +8,10 @@ Also available on [DockerHub](https://hub.docker.com/repository/docker/kbruen/td
 
 The currently built versions are:
 
+- `1.7.0-buster`, `buster`, `1.7.0`, `latest`
 - `1.7.0-buster-slim`, `1.7.0-slim`, `buster-slim`, `slim`
 - `1.7.0-alpine3.13`, `1.7.0-alpine3`, `1.7.0-alpine`, `alpine3.13`, `alpine3`, `alpine`
+- `1.7.0-focal`, `focal`
 
 ## How to use
 
