@@ -26,6 +26,8 @@ FROM alpine:3
 COPY --from=tdlib /tdlib /tdlib/
 ```
 
+Keep in mind that you will need to install additional dependencies (OpenSSL and zlib). Consult the [dependencies part](https://github.com/tdlib/td#dependencies) of the tdlib README, the [build instructions](https://tdlib.github.io/td/build.html) page and/or the Dockerfile used to build the image.
+
 ## How to build
 
 The files used to build the images are located in the [GitHub repository](https://github.com/dancojocaru2000/tdlib-docker).
