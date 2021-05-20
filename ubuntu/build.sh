@@ -13,4 +13,4 @@ else
 	export TDLIB_VER="1.7.0"
 fi
 
-docker build -t "tdlib:$TDLIB_VER-$UBUNTU_VERSION" --build-arg TDLIB_VER --build-arg UBUNTU_VERSION .
+docker build -t "tdlib:$TDLIB_VER-$UBUNTU_VERSION" --build-arg TDLIB_VER --build-arg UBUNTU_VERSION $(dirname $0)

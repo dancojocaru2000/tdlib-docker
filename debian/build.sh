@@ -13,4 +13,4 @@ else
 	export TDLIB_VER="1.7.0"
 fi
 
-docker build -t "tdlib:$TDLIB_VER-$DEBIAN_VERSION" --build-arg TDLIB_VER --build-arg DEBIAN_VERSION .
+docker build -t "tdlib:$TDLIB_VER-$DEBIAN_VERSION" --build-arg TDLIB_VER --build-arg DEBIAN_VERSION $(dirname $0)

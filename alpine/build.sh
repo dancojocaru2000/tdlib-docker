@@ -13,4 +13,4 @@ else
 	export TDLIB_VER="1.7.0"
 fi
 
-docker build -t "tdlib:$TDLIB_VER-alpine-$ALPINE_VERSION" --build-arg TDLIB_VER --build-arg ALPINE_VERSION .
+docker build -t "tdlib:$TDLIB_VER-alpine-$ALPINE_VERSION" --build-arg TDLIB_VER --build-arg ALPINE_VERSION $(dirname $0)
