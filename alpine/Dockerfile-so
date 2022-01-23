@@ -1,0 +1,10 @@
+ARG ALPINE_VERSION
+ARG TDLIB_IMAGE
+FROM ${TDLIB_IMAGE} AS tdlib
+RUN mkdir /tdlib-so
+WORKDIR /tdlib-so
+RUN find /tdlib/lib -regex '.*\.so.*' -print0 | xargs -0 -I % cp -P % .
+
+FROM alpine:${ALPINE_VERSION}
+WORKDIR /tdlib-so
+COPY --from=tdlib /tdlib-so .

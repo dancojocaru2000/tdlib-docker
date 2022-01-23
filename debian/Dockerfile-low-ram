@@ -14,7 +14,13 @@ RUN if [ "$TDLIB_TAG" ]; then \
 RUN rm -rf build && mkdir build
 WORKDIR /tdlib/build
 RUN CXXFLAGS="-stdlib=libc++" CC=/usr/bin/clang CXX=/usr/bin/clang++ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=../tdlib ..
+RUN cmake --build . --target prepare_cross_compiling
+WORKDIR /tdlib
+RUN php SplitSource.php
+WORKDIR /tdlib/build
 RUN cmake --build . --target install
+WORKDIR /tdlib
+RUN php SplitSource.php --undo
 
 FROM debian:${DEBIAN_VERSION}
 WORKDIR /tdlib

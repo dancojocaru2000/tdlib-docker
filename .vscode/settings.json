@@ -1,0 +1,7 @@
+{
+	"files.exclude": {
+		"alpine": true,
+		"debian": true,
+		"ubuntu": true
+	}
+}
